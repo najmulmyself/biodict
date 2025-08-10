@@ -3,15 +3,14 @@ import 'screens/categories_screen.dart';
 import 'screens/search_screen.dart';
 import 'screens/favorites_screen.dart';
 import 'screens/quiz_intro_screen.dart';
-import 'screens/term_detail_screen.dart';
-import 'screens/quiz_question_screen.dart';
-import 'models/biology_term.dart';
 
 void main() {
   runApp(BiologyDictionaryApp());
 }
 
 class BiologyDictionaryApp extends StatelessWidget {
+  const BiologyDictionaryApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -43,6 +42,8 @@ class BiologyDictionaryApp extends StatelessWidget {
 }
 
 class MainScreen extends StatefulWidget {
+  const MainScreen({super.key});
+
   @override
   _MainScreenState createState() => _MainScreenState();
 }
@@ -73,10 +74,7 @@ class _MainScreenState extends State<MainScreen> {
           });
         },
         items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: 'Search',
-          ),
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
           BottomNavigationBarItem(
             icon: Icon(Icons.category),
             label: 'Categories',
@@ -85,10 +83,7 @@ class _MainScreenState extends State<MainScreen> {
             icon: Icon(Icons.bookmark),
             label: 'Favorites',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.quiz),
-            label: 'Quiz',
-          ),
+          BottomNavigationBarItem(icon: Icon(Icons.quiz), label: 'Quiz'),
         ],
       ),
     );
